@@ -1,5 +1,17 @@
 # Roadway Intel
 
+### Number Plate Recognition using CRNN 
+
+#### Dataset 
+
+We generate data synthetically to mimic the variations found in Pakistan. 
+
+#### Training 
+Training for recognition is done using TensorFlow 
+
+#### Overall Flow 
+We use a Docker Container to contain all the dependencies of our recognition system. The mobile app we are working on will communicate with the server through a simple API. 
+
 ### Vehicle make and model classification in Tensorflow by fine-tuning VGG16
 
 ### Dataset
