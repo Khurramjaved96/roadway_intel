@@ -1,4 +1,4 @@
-<menu
+<menu xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
@@ -9,16 +9,16 @@
 
     <item
         android:id="@+id/action_camera"
-        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_menu_camera"
         android:title="camera"
-        app:showAsAction="ifRoom"
-        />
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_gallery"
 
+        android:icon="@android:drawable/ic_menu_gallery"
         android:orderInCategory="100"
-        app:showAsAction="never"
-
-        android:title="gallery"/>
+        android:title="gallery"
+        app:showAsAction="ifRoom" />
 </menu>
