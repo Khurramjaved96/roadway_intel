@@ -1,4 +1,4 @@
-<menu xmlns:tools="http://schemas.android.com/tools"
+<menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
@@ -11,12 +11,14 @@
         android:id="@+id/action_camera"
         android:orderInCategory="100"
         android:title="camera"
+        app:showAsAction="ifRoom"
         />
 
     <item
         android:id="@+id/action_gallery"
 
         android:orderInCategory="100"
+        app:showAsAction="never"
 
         android:title="gallery"/>
 </menu>

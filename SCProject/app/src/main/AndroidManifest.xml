@@ -29,7 +29,11 @@
             android:name=".settings.SettingsActivity"
             android:label="Settings" />
 
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
+            android:label="Roadway Intel" />
+
+        <activity android:name=".StartActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
             android:configChanges="orientation">>

@@ -21,6 +21,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import com.example.noor.scproject.MainActivity;
 import com.example.noor.scproject.R;
+import com.example.noor.scproject.StartActivity;
 import com.example.noor.scproject.settings.SettingsActivity;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -35,12 +36,12 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class UItests {
+public class UImaintest {
 
     @Rule
-    public IntentsTestRule<MainActivity> mActivityRule = new IntentsTestRule<>(
-            MainActivity.class);
-    private MainActivity mainActivity;
+    public IntentsTestRule<StartActivity> mActivityRule = new IntentsTestRule<>(
+            StartActivity.class);
+    private StartActivity mainActivity;
 
 
 
@@ -48,23 +49,17 @@ public class UItests {
     public void setActivity() {
         mainActivity = mActivityRule.getActivity();
     }
-   @Test
-    public void settings_Activity() {
-        openActionBarOverflowOrOptionsMenu(InstrumentationRegistry.getTargetContext());
-        onView(withText("Settings"))
+
+
+
+    @Test
+    public void main_ActivityTest(){
+
+        onView(withId(R.id.start))
                 .perform(click());
-//Check if intent with Activity 2 it's been launched
-        intended(hasComponent(SettingsActivity.class.getName()));
+        intended(hasComponent(MainActivity.class.getName()));
     }
 
 
-
-  @Test
-    public void gallery_Activity() {
-        openActionBarOverflowOrOptionsMenu(InstrumentationRegistry.getTargetContext());
-        onView(withText("gallery"))
-                .perform(click());
-
-    }
 
 }
