@@ -10,7 +10,11 @@ Number plate recognition from an image has two parts:
 Number plate detection is done using a text detection method called CTPN. We used an off the shelf system that came from recent research for this purpose. However this system has a lot of dependencies. To manage the dependencies easily for easy deployment on a new server, we took help from Docker. 
 Dockerfile of text detection can be found at roadway_intel/TextDetectionServer/SCCTPNServer/
 
-Simply running "nvidia-docker build ." in this directory would setup a container with all the dependencies of text detector. The server files in roadway_intel/TextDetectionServer/SCCTPNServer/ can then be copied to this container to run the module. 
+Simply running 
+```shell
+"nvidia-docker build ."
+```
+in this directory would setup a container with all the dependencies of text detector. The server files in roadway_intel/TextDetectionServer/SCCTPNServer/ can then be copied to this container to run the module. 
 NOTE : To run this module, a GPU with at-least 1.5 GB memory is required. This can run on a CPU however inference time is orders of magnitude slower. 
 
 #### Number Plate Recogntion 
