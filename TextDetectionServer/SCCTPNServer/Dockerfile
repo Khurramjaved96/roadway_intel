@@ -54,5 +54,7 @@ RUN mv opencv-3.2.0 OpenCV
 
 #Set Cuda path for linking
 RUN export CUDA_LIB_PATH=/usr/local/cuda/lib64/stubs/
+
+#Compile OpenCV. This step can take time.
 RUN cd OpenCV && mkdir build && cd build && cmake -D WITH_CUDA=OFF ..
 RUN cd OpenCV && cd build && make -j16 && make install && ldconfig
