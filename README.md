@@ -23,7 +23,7 @@ Consequently, we use another docker container to manage the recognition module.
 
 Dockerfile for recognition can be found at roadway_intel/TextRecognitionServer/. 
 
-After building the container, the model file has to be replaced with our trained model. Our model can be downloaded from : 
+After building the container, the model file has to be replaced with our trained model. Our model can be downloaded from [here](https://drive.google.com/file/d/0B9Sr0v9WkqCmLWtmVkczVmpDYzA/view?usp=sharing)
 
 #### Dataset 
 
