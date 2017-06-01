@@ -1,0 +1,22 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_camera"
+        android:orderInCategory="100"
+        android:title="camera"
+        />
+
+    <item
+        android:id="@+id/action_gallery"
+
+        android:orderInCategory="100"
+
+        android:title="gallery"/>
+</menu>

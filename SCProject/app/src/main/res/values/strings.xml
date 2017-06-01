@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Roadway Intel</string>
+    <string name="default_ip">10.3.16.39</string>
+    <string name="default_port">5000</string>
+</resources>
