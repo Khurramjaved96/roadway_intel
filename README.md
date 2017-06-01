@@ -33,6 +33,21 @@ Dockerfile for recognition can be found at roadway_intel/TextRecognitionServer/.
 
 After building the container, the model file has to be replaced with our trained model. Our model can be downloaded from [here](https://drive.google.com/file/d/0B9Sr0v9WkqCmLWtmVkczVmpDYzA/view?usp=sharing).
 
+To run CRNN, execute: 
+```shell
+"sudo nvidia-docker exec -it <textRecognitionImage> bash"
+"cd /opt/crnn-license/src"
+"cd CTPN"
+"python tools/Server/Server.py" 
+"th server.lua ../model/multi-sampling/ /opt/Synth/backup_5_apr/crnn_snapshot.t7"
+```
+
+Finally, run to run server for recieivng android requests .
+
+```shell
+"python roadway_intel/mainServer/Server/Server.py" 
+```
+
 #### Dataset 
 
 We generate data synthetically to mimic the variations found in Pakistan. 
