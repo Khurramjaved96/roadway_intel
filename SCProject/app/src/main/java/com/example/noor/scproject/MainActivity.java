@@ -30,6 +30,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.noor.scproject.image.ImageHandler;
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageHandler imageHandler = new ImageHandler();   //handler for image operations
     private static URIutil urIutil = new URIutil();
 
-    private Button recognizeButton;   //recognizer button
+    private ImageButton recognizeButton;   //recognizer button
     private ImageView imageView;  //image display
 
     private Bitmap bitmap;   //image bitmap
@@ -73,9 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         /**
          * get reference to button and image view and set on click listener for recognizer button
          */
-        recognizeButton = (Button) findViewById(R.id.recognizeButton);
-        recognizeButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-        recognizeButton.setTextColor(Color.WHITE);
+        recognizeButton = (ImageButton) findViewById(R.id.recognizeButton);
         imageView = (ImageView) findViewById(R.id.imageView);
         recognizeButton.setOnClickListener(this);
 
