@@ -7,6 +7,8 @@ import struct
 import os
 import sys
 import TextDetector.TextDetect as Detector
+import Utils.Utils as utils
+import cv2
 
 def send_msg(sock, msg):
     # Prefix each message with a 4-byte length (network byte order)
@@ -93,7 +95,7 @@ if __name__ == "__main__":
                     n+=1
 
                 for idx, box in enumerate(text_lines):
-                    if discard(labels[idx]):
+                    if utils.reject(labels[idx]):
                         continue
                     cv2.rectangle(im, (box[0], box[1]), (box[2], box[3]), (0, 0, 255), 1)
                     if right is True:
