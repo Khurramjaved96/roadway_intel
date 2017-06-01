@@ -21,7 +21,7 @@ Finally to run text detection server run:
 "sudo nvidia-docker exec -it <textDetectionImage> bash"
 "sudo nvidia-docker start <textDetection_imagename>"
 "cd CTPN"
-"python tools/ctpn_server.py" 
+"python tools/Server/Server.py" 
 ```
 NOTE : To run this module, a GPU with at-least 1.5 GB memory is required. This can run on a CPU however inference time is orders of magnitude slower. 
 
