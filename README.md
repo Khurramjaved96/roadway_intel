@@ -35,11 +35,11 @@ After building the container, the model file has to be replaced with our trained
 
 To run CRNN, execute: 
 ```shell
-"sudo nvidia-docker exec -it <textRecognitionImage> bash"
-"cd /opt/crnn-license/src"
-"cd CTPN"
-"python tools/Server/Server.py" 
-"th server.lua ../model/multi-sampling/ /opt/Synth/backup_5_apr/crnn_snapshot.t7"
+sudo nvidia-docker exec -it <textRecognitionImage> bash
+cd /opt/crnn-license/src
+cd CTPN
+python tools/Server/Server.py 
+th server.lua ../model/multi-sampling/ /opt/Synth/backup_5_apr/crnn_snapshot.t7
 ```
 
 Finally, run to run server for recieivng android requests .
