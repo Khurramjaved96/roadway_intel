@@ -13,8 +13,16 @@ Dockerfile of text detection can be found at roadway_intel/TextDetectionServer/S
 Simply running 
 ```shell
 "nvidia-docker build ."
+"sudo nvidia-docker start <textDetectionImage>"
 ```
 in this directory would setup a container with all the dependencies of text detector. The server files in roadway_intel/TextDetectionServer/SCCTPNServer/ can then be copied to this container to run the module. 
+Finally to run text detection server run:
+```shell
+"sudo nvidia-docker exec -it <textDetectionImage> bash"
+"sudo nvidia-docker start <textDetection_imagename>"
+"cd CTPN"
+"python tools/ctpn_server.py" 
+```
 NOTE : To run this module, a GPU with at-least 1.5 GB memory is required. This can run on a CPU however inference time is orders of magnitude slower. 
 
 #### Number Plate Recogntion 
