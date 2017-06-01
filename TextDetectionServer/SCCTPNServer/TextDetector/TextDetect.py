@@ -43,8 +43,8 @@ class CTPNDetector:
         self.text_proposals_detector = TextProposalDetector(CaffeModel(self.NET_DEF_FILE, self.MODEL_FILE))
         self.text_detector = TextDetector(self.text_proposals_detector)
 
-    def detect(self):
-        im = cv2.imread(os.path.join('/CTPN/ctpn_server/', filename))
+    def detect(self, filepath):
+        im = cv2.imread(filepath)
         im, f = resize_im(im, cfg.SCALE, cfg.MAX_SCALE)
         self.text_lines = self.text_detector.detect(im)
-        print "Number of the detected text lines: %s" % len(text_lines)
+        return self.text_lines
