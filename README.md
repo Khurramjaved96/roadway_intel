@@ -2,15 +2,35 @@
 
 ### Number Plate Recognition using CRNN 
 
+Number plate recognition from an image has two parts: 
+1. Number plate detection 
+2. Number plate recognition 
+
+#### Number Plate Detection 
+Number plate detection is done using a text detection method called CTPN. We used an off the shelf system that came from recent research for this purpose. However this system has a lot of dependencies. To manage the dependencies easily for easy deployment on a new server, we took help from Docker. 
+Dockerfile of text detection can be found at roadway_intel/TextDetectionServer/SCCTPNServer/
+
+Simply running "nvidia-docker build ." in this directory would setup a container with all the dependencies of text detector. The server files in roadway_intel/TextDetectionServer/SCCTPNServer/ can then be copied to this container to run the module. 
+NOTE : To run this module, a GPU with at-least 1.5 GB memory is required. This can run on a CPU however inference time is orders of magnitude slower. 
+
+#### Number Plate Recogntion 
+Number plate recognition is the next step in the pipeline. Again, number plate recognition module has a lot of dependencies. These dependencies also conflict with those of detection module. 
+Consequently, we use another docker container to manage the recognition module. 
+
+Dockerfile for recognition can be found at roadway_intel/TextRecognitionServer/. 
+
+After building the container, the model file has to be replaced with our trained model. Our model can be downloaded from : 
+
 #### Dataset 
 
 We generate data synthetically to mimic the variations found in Pakistan. 
 
 #### Training 
-Training for recognition is done using TensorFlow 
+Training for recognition is done using Torch in Lua. 
 
 #### Overall Flow 
-We use a Docker Container to contain all the dependencies of our recognition system. The mobile app we are working on will communicate with the server through a simple API. 
+We use a Docker Container to contain all the dependencies of our recognition system. The mobile app we are working on will communicate with the server through a simple API.
+
 
 ### Vehicle make and model classification in Tensorflow by fine-tuning VGG16
 
