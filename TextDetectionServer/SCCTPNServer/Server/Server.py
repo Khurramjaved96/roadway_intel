@@ -1,4 +1,7 @@
-#
+# THIS CODE IS PROVIDED BY THE AUTHOR OF THE PAPER. IT IS USED IN ROADWAY INTEL FOR DETECTING LISCENSE PLATES
+# This code can only work when placed inside the CTPN model
+
+
 # The codes are used for implementing CTPN for scene text detection, described in:
 #
 # Z. Tian, W. Huang, T. He, P. He and Y. Qiao: Detecting Text in Natural Image with
@@ -16,7 +19,8 @@
 #
 #   Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences
 #
-#
+
+
 
 
 import socket
