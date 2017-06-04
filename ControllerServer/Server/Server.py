@@ -1,4 +1,3 @@
-
 from flask import Flask, request
 import socket
 import json
@@ -57,7 +56,7 @@ def upload():
     #save data into JSON fornat
     j = {'filename': 'test.jpg', 'im_base64': img}
     j = json.dumps(j)
-    
+
     Utils.persist_file(img, 'test.jpg',app.config['UPLOAD_FOLDER'])
     print "Persisting File"
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
