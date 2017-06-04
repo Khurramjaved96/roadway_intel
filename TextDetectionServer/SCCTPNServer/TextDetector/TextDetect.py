@@ -44,6 +44,11 @@ class CTPNDetector:
         self.text_detector = TextDetector(self.text_proposals_detector)
 
     def detect(self, filepath):
+        """
+
+        :param filepath: File that is opened and then text in this file are detected using CTPN
+        :return: List of co-ordinates of text boxes
+        """
         im = cv2.imread(filepath)
         im, f = resize_im(im, cfg.SCALE, cfg.MAX_SCALE)
         self.text_lines = self.text_detector.detect(im)

@@ -79,6 +79,8 @@ def upload():
 #Address that is used by client to get back the result.
 @app.route('/'+app.config['UPLOAD_FOLDER']+'/<filename>')
 def uploaded_file(filename):
+    print "This is a test";
+    0/0
     return send_from_directory(app.config['UPLOAD_FOLDER'],
                                filename)
 
